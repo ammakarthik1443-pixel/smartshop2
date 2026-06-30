@@ -1,0 +1,41 @@
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:white;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#198754;
+}
+
+.logo span{
+color:#ff9800;
+}
+
+.search-box{
+display:flex;
+width:45%;
+}
+
+.search-box input{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+}
+
+.search-box button{
+padding:12px 20px;
+background:#198754;
+color:white;
+border:none;
+}
+
+.header-icons{
+display:flex;
+gap:20px;
+font-weight:600;
+}

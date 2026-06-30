@@ -1,0 +1,88 @@
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px;
+background:#eef8ef;
+}
+
+.hero-content{
+width:50%;
+animation:slideLeft 1s ease;
+}
+
+.hero-content h1{
+font-size:55px;
+margin:15px 0;
+}
+
+.hero-content h4{
+color:#198754;
+}
+
+.shop-btn{
+padding:15px 35px;
+background:#198754;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+}
+
+.hero-image{
+width:45%;
+animation:slideRight 1s ease;
+}
+
+.hero-image img{
+width:100%;
+border-radius:20px;
+}
+
+@keyframes slideLeft{
+from{
+opacity:0;
+transform:translateX(-50px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+@keyframes slideRight{
+from{
+opacity:0;
+transform:translateX(50px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+/* hero-image class already iruntha, athula overflow: hidden add pannikonga */
+.hero-image {
+  overflow: hidden; 
+  border-radius: 20px; /* Image corners round aaga */
+}
+
+/* Pudhusa add panna image class */
+.animated-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: imageFadeZoom 1s ease-in-out forwards;
+}
+
+/* Swap aagumpothu varum animation */
+@keyframes imageFadeZoom {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

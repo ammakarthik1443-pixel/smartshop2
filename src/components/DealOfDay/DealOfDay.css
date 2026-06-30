@@ -1,0 +1,117 @@
+.deals-section {
+  padding: 30px 5%;
+}
+
+.deals-banner {
+  background-color: #ffc107; /* Yellow background */
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.deals-content h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.deals-content p {
+  color: #444;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.timer-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.timer-box {
+  background-color: #dc3545; /* Red boxes */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.time-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.time-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.shop-now-blue-btn {
+  background-color: #0d6efd; /* Blue button */
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.shop-now-blue-btn:hover {
+  background-color: #0b5ed7;
+}
+
+.deals-image-container {
+  position: relative;
+  width: 350px;
+  height: 200px;
+}
+
+.basket-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.discount-circle {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: #dc3545;
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+  transform: rotate(15deg);
+}
+
+.discount-circle strong {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.discount-circle span {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .deals-banner { flex-direction: column; padding: 20px; text-align: center; }
+  .timer-container { justify-content: center; }
+  .deals-image-container { margin-top: 40px; width: 100%; }
+}

@@ -1,0 +1,184 @@
+.categories-section {
+  padding: 30px 5%;
+  background-color: #ffffff;
+}
+
+/* Header styling */
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.categories-header h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #333;
+  margin: 0;
+}
+
+
+/* Horizontal scrolling list for cards */
+.categories-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px; /* Space for scrollbar */
+  scrollbar-width: thin; /* Firefox */
+}
+
+/* Hide scrollbar for webkit browsers for cleaner look */
+.categories-list::-webkit-scrollbar {
+  height: 6px;
+}
+.categories-list::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+.categories-list::-webkit-scrollbar-thumb {
+  background: #ccc; 
+  border-radius: 10px;
+}
+
+/* Individual Card */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 15px 10px;
+  min-width: 120px; /* Fixed width for uniform look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-color: #d1e7dd;
+}
+
+.category-image-container {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.category-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the transparent PNG fits perfectly */
+}
+
+.category-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+.categories-section {
+  padding: 30px 5%;
+  background-color: #fcfcfc;
+}
+
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.categories-header h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #333;
+  margin: 0;
+}
+
+.view-all-btn {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0d6efd;
+  background-color: #f0f7ff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: 1px solid #cce5ff;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+.categories-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 5px 25px 5px; /* Added padding for hover shadow space */
+  scrollbar-width: none; /* Hide scrollbar for cleaner look */
+}
+.categories-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Card Design (Square like your image) */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 20px 15px;
+  min-width: 140px; 
+  height: 160px;
+  
+  /* ANIMATION BASE */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+/* CARD HOVER ANIMATION: Float up & Shadow */
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  border-color: #d1e7dd;
+}
+
+.category-image-container {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.category-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  /* IMAGE ANIMATION BASE */
+  transition: transform 0.5s ease;
+}
+
+/* IMAGE HOVER ANIMATION: Zoom in */
+.category-card:hover .category-image-container img {
+  transform: scale(1.15);
+}
+
+.category-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}

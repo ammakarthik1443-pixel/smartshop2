@@ -1,0 +1,68 @@
+.page-container {
+  padding: 40px 5%;
+  background-color: #f8f9fb;
+  min-height: 80vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.all-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.cat-grid-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cat-grid-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(11, 142, 54, 0.15);
+}
+
+.cat-grid-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f0f0f0;
+}
+
+.cat-grid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cat-grid-card:hover .cat-grid-image img {
+  transform: scale(1.1);
+}
+
+.cat-grid-card h3 {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
