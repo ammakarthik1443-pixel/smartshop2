@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 import { CartProvider } from "./context/CartContext";
+import { WishlistProvider } from './context/WishlistContext';
 
 import "./styles/global.css";
 import "./styles/responsive.css";
@@ -14,7 +15,9 @@ ReactDOM.createRoot(
 ).render(
   <BrowserRouter>
     <CartProvider>
-      <App />
-    </CartProvider>
+    <WishlistProvider>
+       <App />  {/* Unga app code */}
+    </WishlistProvider>
+  </CartProvider>
   </BrowserRouter>
 );

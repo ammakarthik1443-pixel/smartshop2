@@ -372,3 +372,52 @@
     font-size: 0.8rem;
   }
 }
+/* Fix for clickable links */
+.nav-menu-links li {
+  z-index: 10;
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  pointer-events: auto; /* Clickable aakkum */
+  text-decoration: none;
+  color: #333;
+}
+
+/* Dropdown icon-a link-oda part-a maatha pointer-events: none kuduthudunga */
+.dropdown-icon {
+  pointer-events: none;
+  margin-left: 5px;
+}
+.nav-video-icon {
+  width: 35px;  /* Icon-oda size-a correct pannunga */
+  height: 35px;
+  object-fit: contain;
+  margin-right: 10px; /* Brand text-kku gap kodukkum */
+}
+
+/* Appuram antha old icon-oda classes iruntha athai delete pannidunga */
+.logo-cart-icon, .logo-leaf {
+  display: none; 
+}
+/* Video container-a circle aakkum */
+.logo-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circle shape */
+  overflow: hidden;   /* Ithu thaan video-va circle-kulla cut pannum */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8f5e9; /* Background light green */
+  border: 1px solid #c8e6c9;
+}
+
+/* Video-va fit panna */
+.nav-video-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Video-va full-a fill pannum */
+}
