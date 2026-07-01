@@ -1,0 +1,43 @@
+.offer-page-wrapper {
+  padding: 40px 5%;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.offer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #0b8e36; /* TVR Supermart Green */
+  color: white;
+  border-color: #0b8e36;
+}
+
+.offer-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #222;
+  margin: 0;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}

@@ -11,6 +11,7 @@ import CategoryProducts from '../pages/CategoryProducts/CategoryProducts.jsx';
 // Indha 2 pudhu imports kandipa irukkanum
 import Products from '../pages/Products/Products.jsx';
 import AllCategories from '../pages/Categories/AllCategories.jsx';
+import OfferProducts from "../pages/OfferProducts/OfferProducts.jsx";
 
 function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ function AppRoutes() {
       {/* Pudhusa add panna Routes */}
       <Route path="/products" element={<Products />} />
       <Route path="/categories" element={<AllCategories />} />
+      <Route path="/offer-products" element={<OfferProducts />} />
       
       <Route path="/category/:categoryName" element={<CategoryProducts />} />
       <Route path="/product/:id" element={<ProductDetails />} />

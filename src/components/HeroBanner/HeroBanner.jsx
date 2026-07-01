@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom'; // 1. useNavigate Import
 import "./HeroBanner.css";
 
 function HeroBanner() {
-  // Image array - Unga project-ku thevayana images-a inga add pannikonga
+  const navigate = useNavigate(); // 2. navigate initialize
+  
   const images = [
     "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80",
     "https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=800&q=80",
@@ -11,13 +13,11 @@ function HeroBanner() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // 3 seconds-ku oru murai image change aaga setup
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000); 
 
-    // Clean up function
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -36,7 +36,11 @@ function HeroBanner() {
           Get fresh vegetables, fruits, groceries and household products at the best price.
         </p>
 
-        <button className="shop-btn">
+        {/* 3. Button Click Logic Added */}
+        <button 
+          className="shop-btn" 
+          onClick={() => navigate('/products')}
+        >
           Shop Now
         </button>
       </div>
