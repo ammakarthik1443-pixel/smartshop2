@@ -8,7 +8,10 @@ const PopularCategories = () => {
     { id: 2, name: "Fruits", image: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=150&q=80" },
     { id: 3, name: "Dairy", image: "https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=150&q=80" },
     { id: 4, name: "Snacks", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=150&q=80" },
-    { id: 5, name: "Beverages", image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=150&q=80" }
+    { id: 5, name: "Beverages", image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=150&q=80" },
+    { id: 6, name: "Rice & Grains", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw8EemHa-SA6Ei6zhJuSuBWryVachX18nMxvDjemM0yg&s=10" },
+    { id: 7, name: "Personal Care", image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=300&q=80" }
+
   ];
 
   return (

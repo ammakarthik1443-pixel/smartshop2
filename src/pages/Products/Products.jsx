@@ -25,8 +25,25 @@ const Products = () => {
     { id: 10, name: 'Tropicana Orange Juice', category: 'Beverages', price: 89, image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=400&q=80' },
     { id: 11, name: 'Bisleri Mineral Water 1L', category: 'Beverages', price: 25, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxQK1EhYjK9ENCvc8V3km7MTAL08f7WJxZ07Zz8iRgCg&s=10' },
     // Rice & Grains
-    { id: 13, name: 'Daawat Basmati Rice 5kg', category: 'Rice & Grains', price: 345, image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=80' },
-    { id: 14, name: 'Aashirvaad Whole Wheat Atta 5kg', category: 'Rice & Grains', price: 260, image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80' }
+    { id: 12, name: 'Daawat Basmati Rice 5kg', category: 'Rice & Grains', price: 345, image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=80' },
+    { id: 13, name: 'Aashirvaad Whole Wheat Atta 5kg', category: 'Rice & Grains', price: 260, image: 'https://www.bbassets.com/media/uploads/p/xl/126903_12-aashirvaad-atta-whole-wheat.jpg' },
+    // Personal Care
+{ id: 14, name: 'Dove Beauty Soap', category: 'Personal Care', price: 145, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScF4mMe1W2VFhgJN9jfFjIEv-lz5wxQ8jda2PMConQXw&s=10' },
+
+{ id: 15, name: 'Colgate Strong Teeth Toothpaste', category: 'Personal Care', price: 95, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_-iR8OEzi3_rTXe2EegW6zws85qjkd3trU0dMHiXXODNAbTtI-si1hi8A&s=10' },
+
+// Household
+{ id: 16, name: 'Surf Excel Easy Wash 1kg', category: 'Household', price: 210, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5H_rgFB9NzWjr22IJFr2k5nwrTjjXBBXj0aDJgkx7dA&s=10' },
+
+{ id: 17, name: 'Vim Dishwash Gel 500ml', category: 'Household', price: 95, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1agLJvmFuLBkRXeVAvX1To9nr9qiKAcGAjm6bI6_ZkyeLir4drNV4MtKV&s=10' },
+
+// Fruits
+{ id: 18, name: 'Kashmir Apple 1kg', category: 'Fruits', price: 120, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSRYPNRUklGYkQyUEs2vVWVFOtCS1EIfXX9lXnwnZ52A&s=10' },
+
+{ id: 19, name: 'Robusta Banana 1 Dozen', category: 'Fruits', price: 50, image: 'https://www.bbassets.com/media/uploads/p/l/10000025_32-fresho-banana-robusta.jpg' },
+
+// Vegetables
+{ id: 20, name: 'Fresh Tomato 1kg', category: 'Vegetables', price: 25, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScsb5Q8huWKC_y1FKO9Oe_UMubRE3B6jWmeblrSPyAZA&s=10' }
   ];
 
   return (
@@ -43,21 +60,31 @@ const Products = () => {
             </div>
             <div className="card-info">
               <h3>{product.name}</h3>
+              <div className="rating-row">
+               <span className="stars">⭐⭐⭐⭐⭐</span>
+               <span className="review-count">(328)</span>
+               
               <p style={{ fontSize: '0.8rem', color: '#666' }}>{product.category}</p>
+              </div>
               
-<div className="card-footer">
-  <span>₹{product.price}</span>
-  
+<div className="modern-footer">
+
+  <span className="product-price">
+    ₹{product.price}
+  </span>
+
   {getQuantity(product.id) > 0 ? (
-     <div className="quantity-controls">
-       <button onClick={() => decreaseQuantity(product.id)}>-</button>
-       <span>{getQuantity(product.id)}</span>
-       <button onClick={() => addToCart(product)}>+</button>
-     </div>
+    <div className="quantity-controls">
+      <button onClick={() => decreaseQuantity(product.id)}>-</button>
+      <span>{getQuantity(product.id)}</span>
+      <button onClick={() => addToCart(product)}>+</button>
+    </div>
   ) : (
-    
-    <button className="add-btn" onClick={() => addToCart(product)}>Add</button>
+    <button className="blue-cart-btn" onClick={() => addToCart(product)}>
+      Add to Cart
+    </button>
   )}
+
 </div>
             </div>
           </div>

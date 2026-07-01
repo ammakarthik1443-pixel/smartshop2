@@ -94,7 +94,7 @@ Thank you for shopping with TVR Supermart!`
 
           <div className="cart-summary" style={{ marginTop: '30px', padding: '20px', background: '#f4faf6', borderRadius: '12px', textAlign: 'right' }}>
             <h2>Total Amount: ₹{totalPrice}</h2>
-            <button onClick={handlePlaceOrder} style={{ background: '#0b8e36', color: 'white', padding: '12px 30px', border: 'none', borderRadius: '8px', fontSize: '1.1rem', cursor: 'pointer', marginTop: '15px' }}>
+            <button onClick={handlePlaceOrder} style={{ background: '#19ce55', color: 'white', padding: '12px 30px', border: 'none', borderRadius: '8px', fontSize: '1.1rem', cursor: 'pointer', marginTop: '15px' }}>
               Place Order
             </button>
           </div>

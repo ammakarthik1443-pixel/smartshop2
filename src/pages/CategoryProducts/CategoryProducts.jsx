@@ -38,7 +38,7 @@ const CategoryProducts = () => {
     { id: 15, name: 'Alo Frut Anaar Aloevera Chunks & Juice 150ml (Pack of 60)', category: 'Beverages', subCategory: 'Water', price: 25, image: 'https://axiomayurveda.com/cdn/shop/files/Alo_Frut_Anaar_juice_150ml_Front.jpg?v=1758276977' },
 
     // 6. Rice & Grains
-    { id: 16, name: 'Daawat Basmati Rice', category: 'Rice & Grains', subCategory: 'Rice', price: 345, image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=300&q=80' },
+    { id: 16, name: 'Daawat Basmati Rice', category: 'Rice & Grains', subCategory: 'Rice', price: 345, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw8EemHa-SA6Ei6zhJuSuBWryVachX18nMxvDjemM0yg&s=10' },
     { id: 17, name: 'Aashirvaad Atta 5kg', category: 'Rice & Grains', subCategory: 'Flours', price: 260, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUse0DEkDlT5K_mwwQ2E3SKGrXMUV_5-dkTHc18LSQXw&s=10' },
     { id: 18, name: 'Toor Dal 1kg', category: 'Rice & Grains', subCategory: 'Dals', price: 160, image: 'https://www.bbassets.com/media/uploads/p/l/10000428_17-bb-popular-toorarhar-dal.jpg' },
 
@@ -55,8 +55,34 @@ const CategoryProducts = () => {
     // 9. Pet Food
     { id: 25, name: 'Pedigree Adult Dog Food 3kg', category: 'Pet Food', subCategory: 'Dog Food', price: 650, image: 'https://www.bbassets.com/media/uploads/p/l/30005107_25-pedigree-dry-dog-food-chicken-vegetables-for-adult-dogs.jpg' },
     { id: 26, name: 'Whiskas Adult Cat Food 1.2kg', category: 'Pet Food', subCategory: 'Cat Food', price: 420, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbO9OK8MMJSbmyXnb3TTxg4yuvtePW4vck1FJL-7i2HQ&s' },
-    { id: 27, name: 'Drools Puppy Food 3kg', category: 'Pet Food', subCategory: 'Dog Food', price: 599, image: 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=300&q=80' }
-  ];
+    { id: 27, name: 'Drools Puppy Food 3kg', category: 'Pet Food', subCategory: 'Dog Food', price: 599, image: 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=300&q=80' },
+    
+    // 10. Outdoors & Toys
+    { id: 28, name: 'Cricket Bat Set', category: 'Outdoors & Toys', subCategory: 'Sports Toys', price: 799, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrbKukdPFXPVF6X1_G8po88oU1uQIAuinkRJ8YazNMYg&s=10' },
+    { id: 29, name: 'Remote Control Car', category: 'Outdoors & Toys', subCategory: 'Remote Toys', price: 999, image: 'https://m.media-amazon.com/images/I/5121zV6HCpL._AC_UF1000,1000_QL80_.jpg' },
+    { id: 30, name: 'Football Size 5', category: 'Outdoors & Toys', subCategory: 'Outdoor Games', price: 499, image: 'https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=300&q=80' },
+
+    // 11. Baby Care
+    { id: 31, name: 'Johnson Baby Powder', category: 'Baby Care', subCategory: 'Baby Hygiene', price: 180, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVMql0WYqLMljWzMM_U2FqYoLTRB8z2_4JPLdeecvPhQ&s=10' },
+    { id: 32, name: 'Pampers Diapers Pack', category: 'Baby Care', subCategory: 'Diapers', price: 599, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX_8YzMYVGHUU-GJaWvkmTQFipljzGJrtiQio5K1IKWw&s=10' },
+    { id: 33, name: 'Baby Feeding Bottle', category: 'Baby Care', subCategory: 'Feeding', price: 249, image: 'https://breeze-media.vega.co.in/media/catalog/product/cache/0ee050c3ffc3555709b9bb6062f4d7e9/s/t/steel_feeding_bottle_wide_neck-01_2.webp' },
+
+    // 12. Plastic Goods
+    { id: 34, name: 'Plastic Bucket 20L', category: 'Plastic Goods', subCategory: 'Buckets', price: 220, image: 'https://www.bbassets.com/media/uploads/p/l/40172183_11-bb-home-popular-plastic-strip-bucket-pink.jpg' },
+    { id: 35, name: 'Storage Container Set', category: 'Plastic Goods', subCategory: 'Storage', price: 349, image: 'https://www.milton.in/cdn/shop/files/81rjJUNXfTL._SL1500.jpg?v=1754389590' },
+    { id: 36, name: 'Plastic Chair', category: 'Plastic Goods', subCategory: 'Furniture', price: 699, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT88gTGHeTzT_XDJN15jyIo42dOl9rsshTeQkjAh39lhuMDoXajEjIDOt3T&s=10' },
+
+    // 13. Pulses & Cereals
+    { id: 37, name: 'Urad Dal 1kg', category: 'Pulses & Cereals', subCategory: 'Pulses', price: 145, image: 'https://www.tenalidoublehorse.com/cdn/shop/files/Premium-Urad-Dall-1kg.png?v=1748516600&width=1445' },
+    { id: 38, name: 'Moong Dal 1kg', category: 'Pulses & Cereals', subCategory: 'Pulses', price: 155, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGIMP1NkZ95_iLrhTaF805RDAF0LMcvBEZZ7xfiYykpzPqDHZyU9YOBl4&s=10' },
+    { id: 39, name: 'Ragi Flour 1kg', category: 'Pulses & Cereals', subCategory: 'Cereals', price: 95, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXu1MBP0lPZk2n26C5orTssjPJI1qqrzMMZcPKrm6nFw&s=10' },
+
+    // 14. Birthday Celebration Products
+    { id: 40, name: 'Birthday Balloon Set', category: 'Birthday Celebration Products', subCategory: 'Decorations', price: 199, image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=300&q=80' },
+    { id: 41, name: 'Birthday Candles Pack', category: 'Birthday Celebration Products', subCategory: 'Party Supplies', price: 49, image: 'https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=300&q=80' },
+    { id: 42, name: 'Party Popper Set', category: 'Birthday Celebration Products', subCategory: 'Party Supplies', price: 149, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT71dtCWiZL9Xp-Fw4HbG0JJvbHwwbHD_MRu6_KwfU0bg&s' }
+
+];
 
   // Modified filter logic to handle names with multiple words/symbols like "Rice & Grains" safely
   const filteredProducts = allProducts.filter(
