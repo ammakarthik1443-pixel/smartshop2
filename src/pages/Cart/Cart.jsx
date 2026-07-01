@@ -3,18 +3,37 @@ import { useCart } from '../../context/CartContext';
 import './Cart.css';
 
 const Cart = () => {
-  const { cart, addToCart, decreaseQuantity } = useCart();
+  const { cart, addToCart, decreaseQuantity,clearCart } = useCart();
 
   const totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-
+  const [customerName, setCustomerName] = React.useState('');
+const [mobile, setMobile] = React.useState('');
+const [address, setAddress] = React.useState('');
+const [city, setCity] = React.useState('');
+const [pincode, setPincode] = React.useState('');
   const handlePlaceOrder = () => {
-    if(cart.length === 0) {
-      alert("Your cart is empty!");
-      return;
-    }
-    alert("Order Placed Successfully! 🎉 Total: ₹" + totalPrice);
-    // You can redirect to a success page or clear the cart here
-  };
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+
+  if (!customerName || !mobile || !address || !city || !pincode) {
+    alert("Please fill all customer details!");
+    return;
+  }
+  
+  alert(
+    `✅ Order Placed Successfully!
+
+Customer: ${customerName}
+Mobile: ${mobile}
+
+Total Amount: ₹${totalPrice}
+
+Thank you for shopping with TVR Supermart!`
+  );
+  clearCart();
+};
 
   return (
     <div className="cart-page" style={{ padding: '40px 5%', minHeight: '60vh' }}>
@@ -41,6 +60,37 @@ const Cart = () => {
               </div>
             ))}
           </div>
+          <div className="customer-form">
+  <h3>Customer Details</h3>
+
+  <input type="text" placeholder="Full Name" value={customerName}
+    onChange={(e) => setCustomerName(e.target.value)}
+    className="checkout-input"
+  />
+
+  <input type="tel" placeholder="Mobile Number" value={mobile}
+    onChange={(e) => setMobile(e.target.value)}
+    className="checkout-input"
+  />
+
+  <textarea
+    placeholder="Address"
+    value={address}
+    onChange={(e) => setAddress(e.target.value)}
+    className="checkout-input"
+    rows="3"
+  />
+
+  <input type="text" placeholder="City" value={city}
+    onChange={(e) => setCity(e.target.value)}
+    className="checkout-input"
+  />
+
+  <input type="text" placeholder="Pincode" value={pincode}
+    onChange={(e) => setPincode(e.target.value)}
+    className="checkout-input"
+  />
+</div>
 
           <div className="cart-summary" style={{ marginTop: '30px', padding: '20px', background: '#f4faf6', borderRadius: '12px', textAlign: 'right' }}>
             <h2>Total Amount: ₹{totalPrice}</h2>

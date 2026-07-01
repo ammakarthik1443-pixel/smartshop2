@@ -103,3 +103,23 @@
     top: 100px; /* Sticks to the top when scrolling */
   }
 }
+.checkout-input{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border:1px solid #d8e8dc;
+  border-radius:10px;
+  font-size:14px;
+  box-sizing:border-box;
+}
+
+.checkout-input:focus{
+  outline:none;
+  border-color:#0b8e36;
+}
+
+.cart-summary h3{
+  text-align:left;
+  margin-bottom:15px;
+  color:#0b8e36;
+}

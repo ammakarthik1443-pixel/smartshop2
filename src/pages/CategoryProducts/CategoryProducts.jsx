@@ -1,10 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
+import { FaLeaf, FaCarrot, FaAppleAlt, FaChevronRight } from "react-icons/fa";
 import './CategoryProducts.css';
 
 const CategoryProducts = () => {
   const { categoryName } = useParams();
+  const navigate = useNavigate();
   const { addToCart, decreaseQuantity, getQuantity } = useCart();
 
   // 9 Categories x 3 Products = Total 27 Products
@@ -61,16 +64,40 @@ const CategoryProducts = () => {
   );
 
   const subCategories = [...new Set(filteredProducts.map(p => p.subCategory))];
-
+  const categoryIcons = {
+  "Daily Veggies": <FaLeaf />,
+  "Root": <FaCarrot />,
+  "Fresh Fruits": <FaAppleAlt />,
+  "Daily Fruits": <FaAppleAlt />,
+  "Citrus": <FaAppleAlt />,
+};
   return (
     
-
+      
+      
       <div className="cat-main-layout">
         <aside className="cat-sidebar">
+          <button className="back-bts" onClick={() => navigate(-1)}>
+          ← Back
+        </button>
+          
           <h3>Categories</h3>
           {subCategories.map(sub => (
-            <div key={sub} className="sidebar-item">{sub}</div>
-          ))}
+  <div key={sub} className="sidebar-item modern-sidebar-item">
+    
+    <div className="sidebar-icon">
+      {categoryIcons[sub] || <FaLeaf />}
+    </div>
+
+    <div className="sidebar-content">
+      <h4>{sub}</h4>
+      <p>Fresh & Quality Products</p>
+    </div>
+
+    
+
+  </div>
+))}
         </aside>
 
         <main className="cat-product-grid">

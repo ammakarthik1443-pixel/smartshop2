@@ -11,8 +11,15 @@ import {
 import { FiShoppingCart } from 'react-icons/fi';
 import './Navbar.css';
 import logoVideo from '../../assets/logo-icon.mp4';
+import { useCart } from '../../context/CartContext';
 
 function Navbar() {
+  const { cart } = useCart();
+
+const cartCount = cart.reduce(
+  (total, item) => total + item.quantity,
+  0
+);
   return (
     <header className="new-header-container">
       
@@ -53,14 +60,14 @@ function Navbar() {
             <li>
               <li>
   <Link to="/products" className="nav-link"> {/* AppRoutes-la /products route irukkanum */}
-    Products <FaChevronDown className="dropdown-icon" />
+    Products 
   </Link>
 </li>
             </li>
             <li>
               <li>
   <Link to="/categories" className="nav-link"> {/* AppRoutes-la /categories route irukkanum */}
-    Categories <FaChevronDown className="dropdown-icon" />
+    Categories 
   </Link>
 </li>
             </li>
@@ -83,9 +90,11 @@ function Navbar() {
             
             
             <Link to="/cart" className="icon-btn">
-              <FaShoppingCart />
-              <span className="badge-count">0</span>
-            </Link>
+  <FaShoppingCart />
+  {cartCount > 0 && (
+    <span className="badge-count">{cartCount}</span>
+  )}
+</Link>
 
             
 
