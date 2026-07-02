@@ -66,3 +66,12 @@
   font-size: 1.1rem;
   font-weight: 700;
 }
+
+/* Mobile-only adjustments */
+@media (max-width: 768px) {
+  .page-container { padding: 20px 4%; }
+  .all-categories-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .cat-grid-card { padding: 18px; border-radius: 14px; }
+  .cat-grid-image { width: 100px; height: 100px; }
+  .cat-grid-card h3 { font-size: 1rem; }
+}
