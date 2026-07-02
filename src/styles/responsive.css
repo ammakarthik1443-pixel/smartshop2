@@ -75,3 +75,26 @@ padding:40px 20px;
 font-size:35px;
 }
 }
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero,
+  .categories-section,
+  .featured-section,
+  .deals-section,
+  .main-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero,
+  .categories-section,
+  .featured-section,
+  .deals-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

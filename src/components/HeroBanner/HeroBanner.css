@@ -3,7 +3,8 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:60px;
-background:#eef8ef;
+background:linear-gradient(135deg, #f0fff4 0%, #e9f7ef 100%);
+box-shadow:inset 0 1px 0 rgba(25, 135, 84, 0.06);
 }
 
 .hero-content{
@@ -13,21 +14,34 @@ animation:slideLeft 1s ease;
 
 .hero-content h1{
 font-size:55px;
-margin:15px 0;
+margin:12px 0 10px;
+font-weight:800;
+line-height:1.05;
+letter-spacing:-0.02em;
 }
 
 .hero-content h4{
 color:#198754;
+font-weight:700;
+margin-bottom:10px;
 }
 
 .shop-btn{
-padding:15px 35px;
-background:#198754;
+padding:14px 28px;
+background:linear-gradient(135deg, #198754, #1f9d63);
 color:white;
 border:none;
-border-radius:8px;
-font-size:18px;
+border-radius:999px;
+font-size:16px;
 cursor:pointer;
+font-weight:700;
+box-shadow:0 10px 24px rgba(25,135,84,0.18);
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.shop-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 14px 28px rgba(25,135,84,0.22);
 }
 
 .hero-image{
@@ -37,7 +51,8 @@ animation:slideRight 1s ease;
 
 .hero-image img{
 width:100%;
-border-radius:20px;
+border-radius:24px;
+box-shadow:0 16px 40px rgba(15,23,42,0.14);
 }
 
 @keyframes slideLeft{

@@ -1,89 +1,86 @@
 .main-footer {
-  background-color: #0d6efd; /* Blue background */
+  background: linear-gradient(180deg, #1667e0 0%, #0d6efd 100%);
   color: #ffffff;
-  padding: 50px 5% 20px 5%;
+  padding: 36px 5% 18px;
   font-family: Arial, sans-serif;
 }
 
 .footer-top-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: 22px;
+  margin-bottom: 24px;
 }
 
 .footer-heading {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 12px;
   color: #ffffff;
 }
 
 .footer-subtext {
   font-size: 0.85rem;
-  color: #e0e0e0;
-  margin-bottom: 15px;
+  color: #e8f1ff;
+  margin-bottom: 14px;
   line-height: 1.5;
 }
 
-/* Newsletter */
 .newsletter-box {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .newsletter-box input {
-  padding: 10px 15px;
+  padding: 10px 12px;
   border: none;
-  border-radius: 4px 0 0 4px;
+  border-radius: 999px 0 0 999px;
   outline: none;
-  width: 60%;
+  width: 100%;
 }
 
 .newsletter-box button {
-  background-color: #ffc107; /* Yellow button */
-  color: #000;
+  background: linear-gradient(135deg, #ffc107, #ffb703);
+  color: #111827;
   border: none;
-  padding: 10px 20px;
-  border-radius: 0 4px 4px 0;
-  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 0 999px 999px 0;
+  font-weight: 800;
   cursor: pointer;
 }
 
-/* Footer Logo */
 .footer-logo {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .logo-tvr { color: #ffffff; }
-.logo-supermart { color: #81c784; } /* Light green */
+.logo-supermart { color: #8ce99a; }
 
-/* Social Icons */
 .social-icons {
   display: flex;
-  gap: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .social-icon {
-  width: 35px;
-  height: 35px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-decoration: none;
-  transition: transform 0.3s;
+  transition: transform 0.25s ease;
 }
 
-.social-icon:hover { transform: scale(1.1); }
+.social-icon:hover { transform: translateY(-1px); }
 .social-icon.fb { background: #3b5998; }
 .social-icon.insta { background: #E1306C; }
 .social-icon.twitter { background: #1DA1F2; }
 .social-icon.yt { background: #FF0000; }
 
-/* Links */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -91,11 +88,11 @@
 }
 
 .footer-links li {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .footer-links a {
-  color: #e0e0e0;
+  color: #e8f1ff;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s;
@@ -105,7 +102,6 @@
   color: #ffc107;
 }
 
-/* Contact Info */
 .contact-info {
   list-style: none;
   padding: 0;
@@ -114,37 +110,36 @@
 
 .contact-info li {
   display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: 10px;
+  margin-bottom: 10px;
   align-items: flex-start;
-  font-size: 0.9rem;
-  color: #e0e0e0;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  color: #e8f1ff;
+  line-height: 1.45;
 }
 
 .c-icon {
-  margin-top: 4px;
+  margin-top: 3px;
   color: #ffffff;
 }
 
-/* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.2);
-  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  padding-top: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.85rem;
-  color: #e0e0e0;
+  font-size: 0.82rem;
+  color: #e8f1ff;
 }
 
 .payment-icons {
   display: flex;
-  gap: 10px;
-  font-size: 1.8rem;
+  gap: 8px;
+  font-size: 1.5rem;
   background-color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 6px 10px;
+  border-radius: 999px;
   color: #333;
 }
 
@@ -152,23 +147,34 @@
   color: #0d6efd;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;
   }
   .brand-col {
-    grid-column: 1 / -1; /* Span across full width */
+    grid-column: 1 / -1;
   }
 }
 
 @media (max-width: 576px) {
+  .main-footer {
+    padding: 28px 16px 16px;
+  }
   .footer-top-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .footer-bottom {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     text-align: center;
+  }
+  .newsletter-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .newsletter-box input,
+  .newsletter-box button {
+    border-radius: 999px;
   }
 }
