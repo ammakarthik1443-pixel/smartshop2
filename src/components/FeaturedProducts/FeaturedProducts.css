@@ -171,3 +171,12 @@
   border-color: #dc3545;
   transform: scale(1.03);
 }
+@media (max-width: 768px) {
+
+  .product-grid .product-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    
+  }
+}
